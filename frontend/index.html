@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Transfer Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Data Transfer Application</h1>
+
+    <div class="buttons">
+        <button id="ping-servers">🔄 Check Server Status</button>
+        <button id="query-rdf4j">1. Query RDF4J Data</button>
+        <button id="display-rest">2. Display REST Server Data</button>
+        <button id="transfer-graphql">3. Transfer to GraphQL</button>
+        <button id="query-graphql">4. Query GraphQL Data</button>
+        <button id="generate-ranking">🏆 Generate AI Player Ranking 2024</button>
+    </div>
+
+    <div class="property-query-section">
+        <h3>Query Specific Team Properties</h3>
+        <form id="query-form">
+            <label for="key-select">Select team property to query:</label>
+            <select id="key-select">
+                <option value="name">Team Name</option>
+                <option value="foundingDate">Founding Date</option>
+                <option value="sport">Sport Type</option>
+            </select>
+            <button type="submit">🔍 Query Property</button>
+        </form>
+    </div>
+
+    <h2>Server Status</h2>
+    <div id="server-status" class="server-status">
+        <div class="status-item">
+            <span class="server-name">RDF4J Server (8080)</span>
+            <span id="rdf4j-status" class="status-indicator">❓</span>
+            <span id="rdf4j-response" class="response-time"></span>
+        </div>
+        <div class="status-item">
+            <span class="server-name">REST Server (4000)</span>
+            <span id="rest-status" class="status-indicator">❓</span>
+            <span id="rest-response" class="response-time"></span>
+        </div>
+        <div class="status-item">
+            <span class="server-name">GraphQL Server (3000)</span>
+            <span id="graphql-status" class="status-indicator">❓</span>
+            <span id="graphql-response" class="response-time"></span>
+        </div>
+        <div class="status-item">
+            <span class="server-name">Backend Server (8000)</span>
+            <span id="backend-status" class="status-indicator">❓</span>
+            <span id="backend-response" class="response-time"></span>
+        </div>
+        <div class="status-item">
+            <span class="server-name">Frontend Server (5000)</span>
+            <span id="frontend-status" class="status-indicator">✅</span>
+            <span id="frontend-response" class="response-time">Active (current)</span>
+        </div>
+    </div>
+
+    <h2>Unified Table Display</h2>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>Player Name</th>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>JSON-LD Graph Display</h2>
+    <pre id="json-ld-display"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+requests
+pydantic
+sparqlwrapper
+python-multipart
+aiohttp
+openai
+python-dotenv 

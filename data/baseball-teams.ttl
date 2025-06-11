@@ -1,0 +1,86 @@
+@prefix schema: <http://schema.org/> .
+@prefix ex: <http://example.org/> .
+
+ex:team1 a schema:SportsTeam ;
+  schema:name "New York Yankees" ;
+  schema:url "https://www.mlb.com/yankees" ;
+  schema:description "The New York Yankees are an American professional baseball team based in the New York City borough of the Bronx." ;
+  schema:foundingDate "1901-01-09" ;
+  schema:sport "Baseball" ;
+  schema:location ex:new_york_city ;
+  schema:coach ex:aaron_boone ;
+  schema:member ex:player1, ex:player2 .
+
+ex:team2 a schema:SportsTeam ;
+    schema:name "Boston Red Sox" ;
+    schema:url "https://www.mlb.com/redsox" ;
+    schema:description "The Boston Red Sox are an American professional baseball team based in Boston, Massachusetts." ;
+    schema:foundingDate "1901" ;
+    schema:sport "Baseball" ;
+    schema:location ex:boston ;
+    schema:coach ex:alex_cora ;
+    schema:member ex:player3, ex:player4 .
+
+ex:team3 a schema:SportsTeam ;
+    schema:name "Los Angeles Dodgers" ;
+    schema:url "https://www.mlb.com/dodgers" ;
+    schema:description "The Los Angeles Dodgers are an American professional baseball team based in Los Angeles, California." ;
+    schema:foundingDate "1883" ;
+    schema:sport "Baseball" ;
+    schema:location ex:los_angeles ;
+    schema:coach ex:dave_roberts ;
+    schema:member ex:player5, ex:player6 .
+
+ex:player1 a schema:Person ;
+    schema:name "Aaron Judge" ;
+    schema:height "2.01 m" ;
+    schema:weight "128 kg" ;
+    schema:nationality "American" .
+
+ex:player2 a schema:Person ;
+    schema:name "Gerrit Cole" ;
+    schema:height "1.93 m" ;
+    schema:weight "100 kg" ;
+    schema:nationality "American" .
+
+ex:player3 a schema:Person ;
+    schema:name "Rafael Devers" ;
+    schema:height "1.83 m" ;
+    schema:weight "109 kg" ;
+    schema:nationality "Dominican" .
+
+ex:player4 a schema:Person ;
+    schema:name "Chris Sale" ;
+    schema:height "1.98 m" ;
+    schema:weight "82 kg" ;
+    schema:nationality "American" .
+
+ex:player5 a schema:Person ;
+    schema:name "Mookie Betts" ;
+    schema:height "1.75 m" ;
+    schema:weight "82 kg" ;
+    schema:nationality "American" .
+
+ex:player6 a schema:Person ;
+    schema:name "Clayton Kershaw" ;
+    schema:height "1.93 m" ;
+    schema:weight "102 kg" ;
+    schema:nationality "American" .
+
+ex:new_york_city a schema:City ;
+    schema:name "New York City" .
+
+ex:boston a schema:City ;
+    schema:name "Boston" .
+
+ex:los_angeles a schema:City ;
+    schema:name "Los Angeles" .
+
+ex:aaron_boone a schema:Person ;
+    schema:name "Aaron Boone" .
+
+ex:alex_cora a schema:Person ;
+    schema:name "Alex Cora" .
+
+ex:dave_roberts a schema:Person ;
+    schema:name "Dave Roberts" . 
